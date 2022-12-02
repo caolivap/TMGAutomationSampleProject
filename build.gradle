@@ -41,7 +41,6 @@ dependencies {
     implementation "net.serenity-bdd:serenity-ensure:${serenityVersion}"
     testImplementation "junit:junit:${junitVersion}"
     implementation "org.slf4j:slf4j-api:${slf4jVersion}"
-
 }
 
 gradle.startParameter.continueOnFailure = true
