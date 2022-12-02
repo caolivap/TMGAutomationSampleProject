@@ -1,17 +1,16 @@
 package com.tmg.automation.stepdefinitions;
 
+import com.tmg.automation.exceptions.ProductWasNotAddedException;
 import com.tmg.automation.interactions.GoTo;
 import com.tmg.automation.questions.TheProductWas;
-import com.tmg.automation.exceptions.ProductWasNotAddedException;
 import com.tmg.automation.tasks.AddTennis;
 import com.tmg.automation.tasks.LooksFor;
-import com.tmg.automation.userinterfaces.AmazonHomePage;
+import com.tmg.automation.tasks.NavigateTo;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
@@ -32,7 +31,7 @@ public class ShoppingCartStepDefinitions {
     @Given("^(.*) is on Amazon official homepage$")
     public void carlosIsOnAmazonOfficialHomepage(String actorName) {
         theActorCalled(actorName).wasAbleTo(
-                Open.browserOn().the(AmazonHomePage.class)
+                NavigateTo.amazonHomePage()
         );
     }
 

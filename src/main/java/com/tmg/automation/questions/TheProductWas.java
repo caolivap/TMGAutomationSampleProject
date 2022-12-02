@@ -1,9 +1,7 @@
 package com.tmg.automation.questions;
 
-import com.tmg.automation.interactions.GoTo;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.thucydides.core.annotations.Step;
 
 import static com.tmg.automation.userinterfaces.ShoppingCartPage.SHOPPING_CART_PRODUCTS;
 

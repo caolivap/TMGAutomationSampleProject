@@ -1,12 +1,10 @@
 package com.tmg.automation.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
-import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.pages.PageObject;
 
-@DefaultUrl("https://www.amazon.com/")
-public class AmazonHomePage extends PageObject {
+public class AmazonHomePage {
 
+    public static final String AMAZON_HOME_PAGE_URL = "https://www.amazon.com/";
     public static final Target SEARCH_BAR = Target.the("Amazon Search Bar")
             .locatedBy("css:#twotabsearchtextbox");
     public static final Target SEARCH_BUTTON = Target.the("Amazon Search Button")

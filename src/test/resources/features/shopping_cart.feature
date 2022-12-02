@@ -3,8 +3,13 @@ Feature: Add little girl tennis to shopping cart
   I want to add little girl's tennis to shopping cart
   For buying them later
 
-  Scenario: Add little girl's tennis to shopping cart
+  Scenario Outline: Add little girl's tennis to shopping cart
     Given Carlos is on Amazon official homepage
     When he looks for little girl's tennis
-    And he adds the Skechers Litebeams-Gleam to the shopping cart
+    And he adds the <tennis> to the shopping cart
     Then tennis should be added to shopping cart successfully
+    Examples:
+      | tennis                         |
+      | Skechers Litebeams-Gleam       |
+      | Skechers Tenis deportivos      |
+      | DREAM PAIRS Zapatos deportivos |
