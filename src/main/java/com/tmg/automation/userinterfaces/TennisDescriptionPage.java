@@ -1,9 +1,8 @@
 package com.tmg.automation.userinterfaces;
 
-import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class TennisDescriptionPage extends PageObject {
+public class TennisDescriptionPage {
 
     public static final Target SIZE_DROPDOWN = Target.the("Dropdown for selecting any available tennis size")
             .locatedBy("css:#dropdown_selected_size_name");

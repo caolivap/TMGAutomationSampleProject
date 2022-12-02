@@ -1,5 +1,5 @@
 Feature: Add little girl tennis to shopping cart
-  As an Amazon user
+  As an Amazon potential buyer
   I want to add little girl's tennis to shopping cart
   For buying them later
 

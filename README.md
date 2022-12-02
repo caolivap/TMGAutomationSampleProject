@@ -42,7 +42,7 @@ All information and implementations in this project can be found on next website
     │   │   │        ├───interactions       # Low level actions made into application for achieving a task
     │   │   │        ├───questions          # Layer of screenplay pattern that help validating application state in assertions
     │   │   │        ├───tasks              # High level actions made for Actor in screenplay pattern
-    │   │   │        └───utils              # Classes and methods for using in any project place
+    │   │   │        └───utils              # Classes and methods for using in any place of the project
     │   │   │        └───userinterfaces     # Layer of screenplay pattern for maping web elements from application, also called pages
     │   │   └───resources                   
     │   └───test
