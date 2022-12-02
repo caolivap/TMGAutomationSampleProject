@@ -1,5 +1,6 @@
 package com.tmg.automation.stepdefinitions;
 
+import com.tmg.automation.interactions.GoTo;
 import com.tmg.automation.questions.TheProductWas;
 import com.tmg.automation.exceptions.ProductWasNotAddedException;
 import com.tmg.automation.tasks.AddTennis;
@@ -47,14 +48,14 @@ public class ShoppingCartStepDefinitions {
         theActorInTheSpotlight().attemptsTo(
                 AddTennis.toShoppingCart(productName)
         );
+        theActorInTheSpotlight().attemptsTo(
+                Ensure.that(PRODUCT_ADDED_TO_SHOPPING_CART_SECTION).isDisplayed(),
+                GoTo.shoppingCart()
+        );
     }
 
     @Then("tennis should be added to shopping cart successfully")
     public void tennisShouldBeAddedToShoppingCartSuccessfully() {
-        theActorInTheSpotlight().attemptsTo(
-                Ensure.that(PRODUCT_ADDED_TO_SHOPPING_CART_SECTION).isDisplayed()
-        );
-
         theActorInTheSpotlight().should(seeThat(
                 TheProductWas.addedSuccessfullyMessage()).orComplainWith(
                 ProductWasNotAddedException.class, PRODUCT_NOT_ADDED_SHOPPING_CART)

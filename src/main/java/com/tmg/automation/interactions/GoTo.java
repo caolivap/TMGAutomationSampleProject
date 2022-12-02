@@ -13,7 +13,7 @@ public class GoTo implements Interaction {
         return new GoTo();
     }
 
-    @Step("{0} select the little girl tennis section")
+    @Step("{0} go to shopping cart view")
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

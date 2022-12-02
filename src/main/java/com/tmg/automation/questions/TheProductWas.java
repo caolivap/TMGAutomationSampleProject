@@ -13,12 +13,8 @@ public class TheProductWas implements Question<Boolean> {
         return new TheProductWas();
     }
 
-    @Step("{0} should see that product is on shopping cart view")
     @Override
     public Boolean answeredBy(Actor actor) {
-        actor.attemptsTo(
-                GoTo.shoppingCart()
-        );
         return SHOPPING_CART_PRODUCTS.resolveFor(actor).getText().contains(actor.recall("productName"));
     }
 
