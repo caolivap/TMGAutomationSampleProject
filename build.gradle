@@ -1,0 +1,47 @@
+group 'com.tmg.automation'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.10"
+    }
+}
+
+ext{
+    serenityVersion = '3.3.10'
+    serenityCucumberVersion = '3.3.10'
+    hamcrestVersion = '2.2'
+    slf4jVersion = '1.7.7'
+    junitVersion = '4.13.1'
+}
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-junit:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}"
+    testImplementation "org.hamcrest:hamcrest-core:${hamcrestVersion}"
+    implementation "net.serenity-bdd:serenity-ensure:${serenityVersion}"
+    testImplementation "junit:junit:${junitVersion}"
+    implementation "org.slf4j:slf4j-api:${slf4jVersion}"
+
+}
+
+gradle.startParameter.continueOnFailure = true
